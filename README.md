@@ -1,4 +1,7 @@
 # aws-cli
+$ curl https://checkip.amazonaws.com
+x.x.x.x
+
 ```
 
 # How to create new key-pair 
@@ -21,4 +24,9 @@ chmod 400 new-key.pem
 
 # How To delete Key pair.
 aws ec2 delete-key-pair --key-name new-key
+```
+
+#How to create Security Groups..
+```
+aws ec2 create-security-group --group-name my-sg --description "My security group" --vpc-id vpc-1a2b3c4d
 ```
