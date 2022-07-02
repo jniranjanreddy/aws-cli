@@ -3,6 +3,17 @@ $ curl https://checkip.amazonaws.com
 x.x.x.x
 
 ```
+$ aws configure set aws_access_key_id default_access_key
+$ aws configure set aws_secret_access_key default_secret_key
+$ aws configure set default.region us-west-2
+$ aws configure set default.ca_bundle /path/to/ca-bundle.pem
+$ aws configure set region us-west-1 --profile testing
+$ aws configure set profile.testing2.region eu-west-1
+$ aws configure set preview.cloudsearch true
+```
+
+
+```
 
 # How to create new key-pair 
 aws ec2 create-key-pair --key-name new-key --query 'KeyMaterial' --output text > new-key.pem
