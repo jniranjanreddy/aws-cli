@@ -41,3 +41,46 @@ aws ec2 delete-key-pair --key-name new-key
 ```
 aws ec2 create-security-group --group-name my-sg --description "My security group" --vpc-id vpc-1a2b3c4d
 ```
+```
+aws iam create-group --group-name MyIamGroup
+{
+    "Group": {
+        "GroupName": "MyIamGroup",
+        "CreateDate": "2018-12-14T03:03:52.834Z",
+        "GroupId": "AGPAJNUJ2W4IJVEXAMPLE",
+        "Arn": "arn:aws:iam::123456789012:group/MyIamGroup",
+        "Path": "/"
+    }
+}
+aws iam create-user --user-name MyUser
+{
+    "User": {
+        "UserName": "MyUser",
+        "Path": "/",
+        "CreateDate": "2018-12-14T03:13:02.581Z",
+        "UserId": "AIDAJY2PE5XUZ4EXAMPLE",
+        "Arn": "arn:aws:iam::123456789012:user/MyUser"
+    }
+}
+
+aws iam add-user-to-group --user-name MyUser --group-name MyIamGroup
+aws iam get-group --group-name MyIamGroup
+
+root@minikube01 ~ # aws iam create-access-key --user-name serverless-admin
+{
+    "AccessKey": {
+        "UserName": "serverless-admin",
+        "AccessKeyId": "AKIATWOLD12345",
+        "Status": "Active",
+        "SecretAccessKey": "sySLLS7A7SPEDOp7/hGxzH/Td12345",
+        "CreateDate": "2023-04-04T21:28:44+00:00"
+    }
+}
+
+
+
+```
+
+
+
+
